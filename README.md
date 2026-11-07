@@ -22,3 +22,6 @@ Le bandeau de l’accueil présente les drapeaux et le nom de la circonscription
 
 ## Date et heure (Maurice)
 L'en-tête affiche une horloge MUT (UTC+4) en direct, actualisée chaque seconde. Les heures de mise en ligne des articles se basent sur l'attribut `data-published-at` (horodatage ISO 8601 avec fuseau ou Z) et s'affichent automatiquement en heure de Maurice. Le temps relatif « il y a... » se met à jour chaque minute. Le 9 mai 2026 reste la date du congrès et de la source, et ne change pas. Pour chaque nouvel article, définir son véritable horodatage de publication dans `datetime` et `data-published-at`; ne jamais générer un faux horodatage « maintenant » lors de chaque affichage. Ce site statique ne crée pas de nouveaux articles automatiquement.
+
+## Actualité Kreol Morisien
+Article neutre : `kreol-morisien-parlement.html`. Source Facebook fournie par l'utilisateur, date du 28 octobre pour la journée internationale, constitution du Select Committee le 4 août 2026 confirmée par l’Assemblée nationale. Horodatage de mise en ligne: 2026-11-07T10:30:09Z. Ne pas présenter le texte Facebook non vérifié comme une citation authentifiée. Les commentaires/J’aime demeurent locaux à l’appareil.
