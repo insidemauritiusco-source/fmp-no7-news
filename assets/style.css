@@ -48,3 +48,56 @@ hr{border:0;border-top:1px solid var(--line)}
 @media(max-width:770px){.shell{padding:0 18px}.brandline{gap:12px}.brandline img{width:68px;height:68px}.rightmark{display:none}.mobileToggle{display:block}.nav{display:none;flex-direction:column;align-items:stretch}.nav.open{display:flex}.nav a,.nav a:first-child{padding:13px 0;border-right:0;border-bottom:1px solid #333}.topgrid,.twocol{grid-template-columns:1fr}.featureart{height:235px}.tiles{grid-template-columns:1fr;gap:0}.footergrid{flex-direction:column}.pageheading{letter-spacing:-1px}}
 @media(max-width:480px){.action-button{font-size:12px;gap:4px;min-height:46px}.action-symbol{font-size:21px}.comment-form-footer{align-items:stretch;flex-direction:column}.post-comment{width:100%}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+/* 2026 FMP No.7 refreshed editorial design */
+:root{--ink:#111820;--muted:#677179;--line:#d6dadc;--red:#b0122d;--paper:#fff;--off:#f4f6f6}
+body{background:var(--off);color:var(--ink);-webkit-font-smoothing:antialiased}
+.utility{background:#0b1219;color:#edf0f2;border:0;font-size:11px;letter-spacing:.9px;text-transform:uppercase;font-weight:700}
+.utility .shell{padding-top:10px;padding-bottom:10px}
+.brandline{background:#fff;position:relative;padding-top:21px;padding-bottom:21px}
+.brandline:before{content:"";position:absolute;z-index:-1;left:-100vw;right:-100vw;top:0;bottom:0;background:#fff}
+.brandline>a{flex:none;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #e2e3e2;border-radius:5px;padding:7px}
+.brandline img{width:108px;height:108px;object-fit:contain}
+.brandline h1{font-size:clamp(27px,3.5vw,46px);font-weight:800;line-height:1.05;letter-spacing:-1.8px}
+.brandline .sub{font-size:12px;letter-spacing:2.5px;margin-top:10px;color:var(--red)}
+.rightmark{font-size:12px;letter-spacing:.3px;line-height:1.7;color:#56616a;font-weight:600}
+.navwrap{background:#15232d}
+.nav a{border-right:1px solid #34404a;padding:16px 22px;font-size:13px;letter-spacing:.25px}
+.nav a.active{background:#b0122d;color:#fff}.nav a:hover{background:#243643;color:#fff}.stripe{height:4px;background:var(--red)}
+.notice{border-left:4px solid var(--red);border-top:1px solid #ece8e7;border-bottom:1px solid #ece8e7;background:#fff;padding:11px 18px;color:#5d5d60;font-size:12px;margin:24px 0 0}
+.frontpage-strap{display:flex;justify-content:space-between;align-items:baseline;gap:15px;padding:32px 0 13px;border-bottom:3px solid var(--ink)}
+.frontpage-strap-left{font-size:clamp(22px,2.8vw,36px);font-weight:800;letter-spacing:-1.2px}
+.frontpage-strap-left em{font-style:normal;color:var(--red);font-weight:400;margin:0 4px}
+.frontpage-strap-right{font-size:10px;font-weight:800;letter-spacing:1.5px;color:#6f777b}
+.topgrid{margin-top:22px;grid-template-columns:minmax(0,1.75fr) minmax(270px,1fr);gap:22px;align-items:start}
+.feature{background:#fff;border:1px solid #e0e3e5;border-top:0;padding:0 0 19px;box-shadow:0 8px 30px rgba(10,24,35,.04)}
+.hero-label{display:flex;justify-content:space-between;align-items:center;background:var(--red);color:#fff;padding:9px 19px;font-size:11px;letter-spacing:1.4px;font-weight:800}
+.hero-label span:last-child{opacity:.77}
+.featureart{background:radial-gradient(circle at 50% 44%,#fff 0%,#fff 44%,#e9edef 100%);height:370px;border-bottom:1px solid #e5e5e5;display:flex;justify-content:center;align-items:center;overflow:hidden}
+.featureart img{display:block;flex:none;height:calc(100% - 22px);width:auto;max-height:calc(100% - 22px);max-width:92%;object-fit:contain;filter:drop-shadow(0 15px 20px rgba(0,0,0,.025))}
+.feature>.meta,.feature>h2,.feature>p,.feature>.textlink,.feature>.post-engagement{margin-left:24px;margin-right:24px}
+.feature>.meta{margin-top:22px;color:#a10f24;font-size:11px;letter-spacing:.6px}
+.feature h2{font:700 clamp(26px,2.8vw,39px)/1.22 'Libre Baskerville',Georgia,serif;margin-top:12px;margin-bottom:13px}
+.feature h2 a:hover,.story a:hover{color:var(--red)}.feature p{font-size:15px;color:#526069;line-height:1.75}
+.aside{border:1px solid #e0e3e5;background:#fff;padding:0 23px 18px;box-shadow:0 8px 30px rgba(10,24,35,.04)}
+.aside>.eyebrow{background:#15232d;margin:0 -23px;padding:13px 22px;color:#fff;letter-spacing:1.8px}
+.aside .story{padding:24px 0;border-bottom:1px solid #dce0e2}
+.aside .story:last-child{border-bottom:0}.story h3{font:700 20px/1.35 'Libre Baskerville',Georgia,serif}
+.story p{color:#63717b;line-height:1.65}
+.fixedmark{background:#f7e8ec;color:#a00e29;border-radius:2px;font-size:10px}
+.section{padding-top:55px}.sectiontitle{font-size:26px;letter-spacing:-.5px;border-color:#192831}
+.tile{background:#fff;border:1px solid #e0e3e5;border-top:4px solid #1d303b;padding:24px;min-height:208px}
+.tile .number{font-size:34px}.tile h3{font-size:21px}.tile p{line-height:1.7}
+.quiet{background:#fff;border:1px solid #e0e3e5;box-shadow:0 6px 20px rgba(10,24,35,.03)}
+.pagebody{background:transparent}.footer{background:#0c151c;border-top:5px solid var(--red)}
+.post-engagement{border-top:1px solid #e1e4e6}.action-button{color:#35444c}.action-button:hover{background:#f0f3f4}
+@media(max-width:770px){
+.brandline{gap:14px;padding-top:17px;padding-bottom:17px}.brandline>a{padding:4px}.brandline img{width:72px;height:72px}
+.brandline h1{font-size:clamp(22px,5.1vw,32px);letter-spacing:-.75px}.brandline .sub{font-size:10px;letter-spacing:1.3px}
+.navwrap .mobileToggle{width:100%;text-align:left;padding:13px 0;font-weight:700}
+.nav a{border-right:0}.frontpage-strap{padding-top:23px}.frontpage-strap-right{display:none}
+.topgrid{grid-template-columns:1fr;margin-top:16px}.featureart{height:280px}
+.feature>.meta,.feature>h2,.feature>p,.feature>.textlink,.feature>.post-engagement{margin-left:18px;margin-right:18px}
+.tiles{gap:12px}.tile{min-height:0}.aside{margin-top:4px}
+}
+@media(max-width:480px){.shell{padding-left:15px;padding-right:15px}.brandline img{width:62px;height:62px}.brandline .sub{font-size:9px}.brandline h1{font-size:22px}.featureart{height:242px}.feature h2{font-size:25px}.frontpage-strap-left{font-size:25px}.feature>.meta{font-size:10px}.footer{margin-top:40px}}
