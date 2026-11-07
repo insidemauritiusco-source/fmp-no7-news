@@ -16,5 +16,6 @@ GitHub Pages → Settings → Pages → Deploy from a branch → main → /(root
 ## Engagement
 Les J'aime et les commentaires ne sont stockés que localement sur le navigateur du visiteur. Ils ne sont ni publics ni partagés. Le partage utilise l'API de partage ou le presse-papiers. Pour un compteur public, une base de données et une modération seront nécessaires.
 
-## Logo
-assets/fmp-logo.svg est une reproduction vectorielle simplifiée du logo transmis; le fichier original est disponible dans l'archive fournie.
+## Identité visuelle
+assets/fmp-logo.jpg et assets/fmp-banner.jpg sont les images originales fournies, sans modification graphique.
+Le bandeau de l’accueil présente les drapeaux et le nom de la circonscription. Les six pages partagent la même charte responsive, avec menu mobile et lien d’évitement clavier.
