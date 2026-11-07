@@ -19,3 +19,6 @@ Les J'aime et les commentaires ne sont stockés que localement sur le navigateur
 ## Identité visuelle
 assets/fmp-logo.jpg et assets/fmp-banner.jpg sont les images originales fournies, sans modification graphique.
 Le bandeau de l’accueil présente les drapeaux et le nom de la circonscription. Les six pages partagent la même charte responsive, avec menu mobile et lien d’évitement clavier.
+
+## Date et heure (Maurice)
+L'en-tête affiche une horloge MUT (UTC+4) en direct, actualisée chaque seconde. Les heures de mise en ligne des articles se basent sur l'attribut `data-published-at` (horodatage ISO 8601 avec fuseau ou Z) et s'affichent automatiquement en heure de Maurice. Le temps relatif « il y a... » se met à jour chaque minute. Le 9 mai 2026 reste la date du congrès et de la source, et ne change pas. Pour chaque nouvel article, définir son véritable horodatage de publication dans `datetime` et `data-published-at`; ne jamais générer un faux horodatage « maintenant » lors de chaque affichage. Ce site statique ne crée pas de nouveaux articles automatiquement.

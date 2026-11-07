@@ -1,6 +1,57 @@
 const toggle=document.querySelector('.mobileToggle'),nav=document.querySelector('#siteNav');
 if(toggle&&nav)toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open))});
-document.querySelectorAll('[data-now]').forEach(el=>el.textContent=new Intl.DateTimeFormat('fr-MU',{dateStyle:'full',timeZone:'Indian/Mauritius'}).format(new Date()));
+
+/* Live Mauritius clock and accurate, automatic news timestamp rendering.
+   All displayed dates use Indian/Mauritius regardless of visitor location.
+   Do not replace an article's actual publication date with the current date. */
+(()=>{
+const timeZone='Indian/Mauritius';
+const dateFormat=new Intl.DateTimeFormat('fr-MU',{timeZone,weekday:'long',year:'numeric',month:'long',day:'numeric'});
+const clockFormat=new Intl.DateTimeFormat('fr-MU',{timeZone,hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'});
+const postFormat=new Intl.DateTimeFormat('fr-MU',{timeZone,dateStyle:'long',timeStyle:'short',hourCycle:'h23'});
+function updateClock(){
+ const now=new Date();
+ const value=dateFormat.format(now)+'  ·  '+clockFormat.format(now)+' (MUT / UTC+4)';
+ document.querySelectorAll('[data-now]').forEach(el=>{if(el.textContent!==value)el.textContent=value});
+}
+function ageLabel(iso,now){
+ const ms=now-new Date(iso).getTime();
+ if(!Number.isFinite(ms))return '';
+ if(ms<0)return '· Publication programmée';
+ const minutes=Math.floor(ms/60000);
+ if(minutes<1)return '· à l’instant';
+ if(minutes<60)return '· il y a '+minutes+' min';
+ const hours=Math.floor(minutes/60);
+ if(hours<24)return '· il y a '+hours+' h';
+ const days=Math.floor(hours/24);
+ if(days<30)return '· il y a '+days+' j';
+ const months=Math.floor(days/30.44);
+ if(months<12)return '· il y a '+Math.max(1,months)+' mois';
+ const years=Math.floor(days/365.25);
+ return '· il y a '+years+' an'+(years>1?'s':'');
+}
+function updatePosts(){
+ const now=Date.now();
+ document.querySelectorAll('[data-published-at]').forEach(el=>{
+  const iso=el.getAttribute('data-published-at');
+  const parsed=new Date(iso);
+  if(!iso||Number.isNaN(parsed.getTime()))return;
+  el.textContent=postFormat.format(parsed)+' (Maurice)';
+  el.setAttribute('datetime',parsed.toISOString());
+ });
+ document.querySelectorAll('[data-post-age-for]').forEach(el=>{
+  const iso=el.getAttribute('data-post-age-for');
+  const label=ageLabel(iso,now);
+  if(label&&el.textContent!==label)el.textContent=label;
+ });
+}
+updateClock();
+updatePosts();
+setInterval(updateClock,1000);
+setInterval(updatePosts,60000);
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'){updateClock();updatePosts()}});
+})();
+
 const contact=document.querySelector('#contactForm');if(contact)contact.addEventListener('submit',event=>{event.preventDefault();const info=document.querySelector('#formInfo');if(info)info.textContent="Aucun message transmis : l'adresse officielle n'est pas encore configurée."});
 (()=>{
 const prefix='fmp7:engagement:';
