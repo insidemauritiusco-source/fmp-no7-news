@@ -1,0 +1,41 @@
+/* Design 1 — professional editorial news review. Homepage only; no functionality changed. */
+:root{--ink:#172437;--red:#b51f3b;--off:#f7f8fa;--line:#e2e5e9}
+body{background:#f7f8fa;color:#172437}
+.shell{max-width:1320px}
+.utility{background:#121d30;font-size:11px}
+.brandline{min-height:116px;gap:20px}
+.brandline img{width:108px;height:100px;object-fit:contain}
+.brandline h1{font-family:Arial,Helvetica,sans-serif;font-size:clamp(27px,3vw,39px);letter-spacing:-1px}
+.brandline .sub{color:#ae1d39;font-size:11px}
+.navwrap{border-bottom:1px solid #dce2e9;box-shadow:0 2px 12px #14243a0a}
+.nav{gap:26px}.nav a{font-size:13px;letter-spacing:.01em}
+.newsroom-kicker{margin-top:28px;color:#b51f3b}
+.newsroom-top{grid-template-columns:minmax(0,1.6fr) minmax(300px,1fr);gap:20px}
+.newsroom-lead{min-height:390px;border-radius:3px;padding:clamp(25px,4vw,48px);background:#15243b}
+.newsroom-lead:before{background:linear-gradient(115deg,#101b2d,#263c57)}
+.newsroom-lead .lead-tag{background:#c51e40}
+.newsroom-lead h2{font-size:clamp(34px,4vw,54px);line-height:1.12}
+.newsroom-lead p{font-size:16px;line-height:1.6}
+.welcome-banner{border-radius:3px;background:#172437}
+.banner-photo{height:260px;object-fit:cover}
+.banner-caption{padding:22px}
+.notice{background:#fff;border-left:4px solid #b51f3b}
+.latest-head{border-bottom:3px solid #172437}
+.latest-head h2{font-family:Arial,Helvetica,sans-serif;font-size:clamp(28px,3.4vw,40px)}
+.latest-cards{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.latest-card{border:1px solid #e0e5eb;border-top:3px solid #bb2342;border-radius:3px;box-shadow:0 3px 15px #14243a08;padding:20px}
+.latest-card h3,.latest-card:first-child h3{font-family:Georgia,serif;font-size:clamp(19px,1.65vw,23px);line-height:1.3}
+.latest-card p{font-size:13px}
+.frontpage-strap{border-bottom:2px solid #172437}
+.topgrid{gap:22px}
+.feature,.aside,.tile,.quiet{border-radius:3px;box-shadow:0 3px 16px #13243b08}
+.feature h2,.story h3{font-family:Georgia,serif}
+.sectiontitle{border-bottom:2px solid #dce2e9}
+.sectiontitle:before{content:"";display:inline-block;width:5px;height:27px;background:#b51f3b;margin-right:10px;flex:none}
+.gallery-teaser a{border-radius:3px}
+.footer{background:#111e30}
+a:hover{text-underline-offset:3px}
+@media(max-width:1000px){.latest-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.newsroom-top{grid-template-columns:1.2fr 1fr}}
+@media(max-width:770px){.shell{padding-left:18px;padding-right:18px}.brandline{min-height:85px}.brandline img{width:76px;height:74px}.brandline h1{font-size:25px}.newsroom-top{grid-template-columns:1fr}.newsroom-lead{min-height:300px;padding:26px}.newsroom-lead h2{font-size:clamp(30px,7vw,42px)}.welcome-banner{display:grid;grid-template-columns:38% 1fr;min-height:170px}.banner-photo{height:100%;min-height:170px}.latest-cards{grid-template-columns:1fr}.topgrid{grid-template-columns:1fr}.sectiontitle:before{height:24px}}
+@media(max-width:440px){.welcome-banner{grid-template-columns:1fr}.banner-photo{height:155px;min-height:0}.brandline h1{font-size:22px}.newsroom-lead{min-height:285px}.newsroom-lead h2{font-size:31px}.latest-card{padding:17px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
