@@ -1,0 +1,31 @@
+/* FMP editorial design review: inspired by international newsrooms, not BBC branding. */
+:root{--red:#af1836;--ink:#172232;--off:#f6f7f8}
+body{background:#f6f7f8}
+.utility{background:#111c2b}
+.brandline.shell{padding-top:9px;padding-bottom:9px;max-width:1320px}
+.brandline h1{letter-spacing:-.045em}
+.navwrap{border-top:1px solid #e0e4e9;border-bottom:3px solid #ad1837;box-shadow:none}
+.navwrap .shell{max-width:1320px}
+.nav a{font-weight:800;text-transform:uppercase;letter-spacing:.035em}
+.nav a.active,.nav a:hover{color:#a71b37;border-bottom-color:#a71b37}
+.newsroom-kicker{font-size:12px;font-weight:800;letter-spacing:.14em;margin-top:20px;margin-bottom:10px}
+.newsroom-top{grid-template-columns:minmax(0,1.75fr) minmax(290px,1fr);gap:18px}
+.newsroom-lead{border-radius:0;min-height:360px;padding:clamp(25px,3.5vw,46px);display:flex;flex-direction:column;justify-content:center}
+.newsroom-lead h2{font-family:Georgia,'Times New Roman',serif;font-weight:800;font-size:clamp(32px,3.7vw,52px);line-height:1.1;letter-spacing:-.025em;max-width:20ch}
+.newsroom-lead p{max-width:65ch}
+.welcome-banner{border-radius:0;overflow:hidden}
+.banner-photo{height:240px}
+.banner-caption{padding:20px}
+.notice{margin-top:14px;font-size:12px}
+.latest-head{border-bottom:3px solid #172232;padding-bottom:10px;margin-bottom:16px}
+.latest-head h2{font-family:Arial,Helvetica,sans-serif;font-weight:800;letter-spacing:-.04em}
+.latest-cards{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.latest-card{background:#fff;border:1px solid #e1e5e9;border-top:4px solid #ae1d3a;border-radius:0;box-shadow:none;padding:19px 17px;display:flex;flex-direction:column}
+.latest-card h3,.latest-card:first-child h3{font-family:Georgia,'Times New Roman',serif;font-size:clamp(19px,1.65vw,23px);line-height:1.28}
+.latest-card p{font-size:13px;line-height:1.55}
+.latest-card time{margin-top:auto;padding-top:14px}
+.sectiontitle{font-weight:800;letter-spacing:-.02em}
+.feature,.aside,.tile{border-radius:0}
+@media(max-width:1020px){.newsroom-top{grid-template-columns:minmax(0,1.3fr) minmax(270px,1fr)}.latest-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:770px){.newsroom-top{grid-template-columns:1fr}.newsroom-lead{min-height:300px;padding:26px}.newsroom-lead h2{font-size:clamp(30px,7vw,42px)}.latest-cards{grid-template-columns:1fr}.latest-card{padding:19px}.latest-card h3,.latest-card:first-child h3{font-size:22px}.welcome-banner{grid-template-columns:38% 1fr}.banner-photo{height:100%;min-height:180px}}
+@media(max-width:440px){.welcome-banner{grid-template-columns:1fr}.banner-photo{height:180px;min-height:0}.newsroom-lead{min-height:275px}.newsroom-lead h2{font-size:31px}}
