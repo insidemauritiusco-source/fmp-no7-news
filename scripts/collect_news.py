@@ -25,6 +25,8 @@ def read_feed(source):
     request = urllib.request.Request(source["rss"], headers={"User-Agent": "FMP-NewsMonitor/1.0 (+public news links)"})
     with urllib.request.urlopen(request, timeout=12) as response:
         raw = response.read(2_000_000)
+    if b"<!DOCTYPE" in raw.upper() or b"<!ENTITY" in raw.upper():
+        raise ValueError("DTD or entity declarations are not permitted")
     root = ET.fromstring(raw)
     entries = []
     for node in root.findall(".//item"):
