@@ -1,4 +1,7 @@
 {
-  "source": "Official FMP Facebook Page (authorization pending)",
+  "source": "FMP official Facebook Page — user-confirmed link; access and automated ingestion not yet verified",
+  "sourceUrl": "https://www.facebook.com/share/1FX57LjJBH/",
+  "authorizationStatus": "pending_admin_or_platform_access",
+  "automaticSyncActive": false,
   "items": []
 }
