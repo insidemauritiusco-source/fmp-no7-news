@@ -1,22 +1,29 @@
 ---
-title: "Mare-Chicose : des inquiétudes sur les bassins de lixiviat"
+title: "Mare-Chicose : alerte sur les bassins de lixiviat et demandes d'explications"
 date: "2026-11-14"
 status: draft
-image: pending-user-photo
+image: pending-user-photo-upload
+photo_original_filename: "6959.jpg"
 ---
 
-# Mare-Chicose : des inquiétudes sur les bassins de lixiviat
+# Mare-Chicose : alerte sur les bassins de lixiviat et demandes d'explications
 
-**Brouillon éditorial – à ne pas publier**
+**Brouillon éditorial FMP No.7 — non publié**
 
-L'interruption signalée du transport du lixiviat à Mare-Chicose suscite des inquiétudes concernant la capacité des bassins de rétention, notamment en cas de fortes pluies.
+Une alerte transmise à FMP No.7 soulève des préoccupations sur la gestion des bassins de lixiviat de Mare-Chicose et sur les conséquences possibles de fortes pluies. Ces affirmations doivent encore être confrontées aux données de l'exploitant et des autorités.
 
-Selon le témoignage transmis, les transporteurs auraient suspendu leurs opérations en raison d'arriérés de paiement. Il est également affirmé qu'un bassin serait en réparation, que deux bassins seraient remplis et qu'un transfert serait en cours vers un bassin de réserve. **Ces détails techniques restent à confirmer par une source officielle ou des documents de suivi.**
+Selon le texte communiqué, les camions assurant le transport de déchets liquides auraient interrompu leurs opérations depuis environ une semaine, en raison de paiements qui seraient en retard. Parmi quatre bassins évoqués, un serait en réparation et deux autres seraient remplis, tandis qu'un transfert vers un bassin de réserve serait en cours. **Ces éléments, y compris les niveaux des bassins et les motifs d'interruption, ne sont pas indépendamment confirmés.**
 
-Un débordement pourrait, selon l'alerte, menacer un canal en direction de Saint-Hubert. **Aucun débordement effectif n'est établi par les éléments fournis.**
+L'auteur de l'alerte craint qu'en cas de fortes pluies, une saturation puisse entraîner un débordement en direction d'un canal et des habitations de Saint-Hubert. **Aucun débordement effectif ni contamination de ces habitations n'est établi par la photo ou le texte fournis.**
 
-La situation appelle une clarification urgente sur les volumes de lixiviat, les capacités disponibles, les mesures de prévention et les conditions de reprise du transport. Les questions de paiement et de responsabilité contractuelle méritent également une réponse documentée.
+## Demandes exprimées dans l'alerte
 
-*Photo : image fournie par le contributeur dans la conversation, à intégrer avant toute publication. La photo ne prouve pas à elle seule les niveaux des bassins.*
+Le texte appelle à une reprise urgente du pompage et du transport, au règlement des sommes qui seraient dues aux transporteurs, ainsi qu'à un examen des responsabilités contractuelles et d'éventuelles sanctions en cas de manquements établis. Il critique également ce qu'il décrit comme une tolérance persistante à l'égard de possibles défaillances de gestion. **Il s'agit de revendications et d'opinions de l'auteur, non de conclusions d'une enquête.**
 
-*Vérifications requises avant publication : réponse du ministère, exploitant, transporteurs, état des quatre bassins, date de reprise des pompages et droits d'utilisation de l'image.*
+## Photo
+
+**Fichier fourni :** `6959.jpg` (photo reçue dans la conversation, en attente de transfert binaire dans GitHub). La photo montre un bassin d'eau bordé de végétation, avec des collines à l'arrière-plan. Le lieu exact, la date et la nature du liquide ne peuvent pas être vérifiés à partir de l'image seule. Ne pas présenter cette photographie comme preuve d'un débordement ou d'une pollution.
+
+**À vérifier avant publication :** origine et droits de la photographie, date de prise de vue, confirmation par l'exploitant, ministère et transporteurs, état des quatre bassins, capacités, mesures de prévention, éventuels arriérés et réponse des parties mises en cause.
+
+*Note : le fichier photo n'est pas encore présent dans le dépôt. Ne pas fusionner ou publier ce brouillon.*
