@@ -1,0 +1,29 @@
+name: Sync authorized FMP Facebook media
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */6 * * *'
+permissions:
+  contents: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fetch Page media
+        env:
+          FMP_FACEBOOK_PAGE_ID: ${{ secrets.FMP_FACEBOOK_PAGE_ID }}
+          FMP_FACEBOOK_PAGE_TOKEN: ${{ secrets.FMP_FACEBOOK_PAGE_ACCESS_TOKEN }}
+        run: python scripts/sync_fmp_facebook.py
+      - name: Save public media index
+        run: |
+          if ! git diff --quiet -- data/fmp-facebook-media.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/fmp-facebook-media.json
+            git commit -m "Update FMP Facebook media index"
+            git push
+          fi
