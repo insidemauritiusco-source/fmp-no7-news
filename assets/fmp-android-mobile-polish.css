@@ -1,0 +1,40 @@
+/* FMP No.7 mobile readability refinement, CSS-only; preserve site behavior. */
+@media(max-width:770px){
+.utility .shell{padding-top:8px;padding-bottom:8px;gap:4px}
+.utility [data-now]{font-size:12px;line-height:1.35}
+.brandline.shell{padding-top:9px;padding-bottom:9px;gap:11px}
+.brandline>a{flex:0 0 64px}
+.brandline img{width:64px;height:64px;object-fit:contain}
+.brandline h1{font-size:clamp(20px,5vw,25px);line-height:1.08;letter-spacing:-.02em}
+.brandline .sub{font-size:10px;margin-top:5px}
+.navwrap .shell{padding-top:0;padding-bottom:0}
+.mobileToggle{display:block;width:100%;text-align:left;padding:12px 16px;font-size:17px;line-height:1.35;font-weight:800;border:0;background:#fff;color:#16263a;cursor:pointer;min-height:48px}
+.mobileToggle:focus-visible{outline:3px solid #b3203c;outline-offset:-3px}
+.nav{gap:0}
+.nav a{min-height:44px;display:flex;align-items:center;padding:12px 16px;font-size:15px}
+.newsroom-kicker{margin-top:16px;margin-bottom:10px}
+.newsroom-top .featured-photo-lead{min-height:0}
+.featured-photo-overlay{min-height:0;padding:clamp(18px,4vw,26px);justify-content:flex-end}
+.featured-photo-lead .featured-photo-image{object-position:center 30%}
+.featured-photo-lead:after{background:linear-gradient(0deg,#091425f7 0%,#091425e8 42%,#09142575 78%,#09142530 100%)}
+.featured-photo-lead .featured-photo-credit{font-size:9px;line-height:1.45}
+.featured-photo-lead .featured-photo-attribution{font-size:10px;line-height:1.5}
+.featured-photo-lead h2{font-size:clamp(26px,5.8vw,34px);line-height:1.16;margin:12px 0 11px;letter-spacing:-.015em}
+.featured-photo-lead p{font-size:14px;line-height:1.55}
+.featured-photo-lead .lead-meta{font-size:11px;line-height:1.5}
+.latest-head h2{font-size:clamp(25px,5.6vw,32px)}
+.latest-card h3,.latest-card:first-child h3{font-size:21px;line-height:1.32}
+}
+@media(max-width:480px){
+.utility .shell{padding-left:16px;padding-right:16px}
+.brandline.shell{padding-left:16px;padding-right:16px}
+.brandline>a{flex-basis:60px}
+.brandline img{width:60px;height:60px}
+.brandline h1{font-size:21px}
+.newsroom-top .featured-photo-lead{min-height:0}
+.featured-photo-overlay{min-height:0;padding:19px 18px 23px}
+.featured-photo-lead h2{font-size:clamp(26px,7.1vw,31px)}
+.featured-photo-lead .lead-tag{font-size:10px}
+.featured-photo-lead .featured-photo-credit,.featured-photo-lead .featured-photo-attribution{max-width:100%;overflow-wrap:anywhere}
+.latest-card{padding:18px}
+}
