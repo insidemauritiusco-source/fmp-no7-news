@@ -1,0 +1,18 @@
+/* FMP No.7 editorial photo feature: uses existing press conference photo and story */
+.featured-photo-section{margin:30px 0 26px}
+.featured-photo-heading{display:flex;justify-content:space-between;align-items:end;gap:16px;border-bottom:3px solid #17273b;padding-bottom:12px;margin-bottom:16px}
+.featured-photo-eyebrow{font-size:11px;font-weight:800;letter-spacing:.12em;color:#a51e38}
+.featured-photo-heading h2{margin:5px 0 0;font:800 clamp(26px,3vw,38px)/1.12 Arial,Helvetica,sans-serif;color:#172437}
+.featured-photo-all{font-weight:700;font-size:13px;color:#9e213d;white-space:nowrap}
+.featured-photo-story{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(270px,1fr);background:#fff;border:1px solid #e0e4ea;min-height:300px}
+.featured-photo-media{display:block;position:relative;overflow:hidden;min-height:300px;background:#1b2a40}
+.featured-photo-media img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:16/9}
+.featured-photo-copy{padding:clamp(20px,3vw,34px);display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.featured-photo-category{font-size:11px;letter-spacing:.1em;font-weight:900;color:#b3203c}
+.featured-photo-copy h3{font:700 clamp(24px,2.5vw,34px)/1.2 Georgia,'Times New Roman',serif;color:#172437;margin:13px 0}
+.featured-photo-copy p{font-size:14px;line-height:1.65;color:#465669;margin:0 0 16px}
+.featured-photo-copy time{font-size:12px;color:#596579}
+.featured-photo-read{margin-top:19px;color:#a51e38;font-weight:800;font-size:13px}
+.featured-photo-story a:hover{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:770px){.featured-photo-story{grid-template-columns:1fr}.featured-photo-media{min-height:0}.featured-photo-media img{height:auto}.featured-photo-copy{padding:22px}.featured-photo-section{margin:24px 0}.featured-photo-copy h3{font-size:27px}}
+@media(max-width:480px){.featured-photo-heading{align-items:flex-start;flex-direction:column;gap:9px}.featured-photo-heading h2{font-size:28px}.featured-photo-copy h3{font-size:25px}}
