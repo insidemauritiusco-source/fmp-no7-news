@@ -1,0 +1,17 @@
+/* Final FMP No.7 editorial typography and spacing pass — additive, homepage only */
+.navwrap .nav a{font-size:14px;letter-spacing:.01em;padding-top:14px;padding-bottom:14px}
+.newsroom-lead{padding:clamp(25px,3.2vw,42px)}
+.newsroom-lead h2{font-size:clamp(31px,3.35vw,47px);line-height:1.13;letter-spacing:-.025em;max-width:24ch;margin-top:17px;margin-bottom:14px}
+.newsroom-lead p{font-size:15px;line-height:1.6}
+.newsroom-lead .lead-meta{font-size:11px;letter-spacing:.035em}
+.latest-head{margin-bottom:19px}
+.latest-cards{gap:17px}
+.latest-card{padding:20px 18px;gap:12px}
+.latest-card h3,.latest-card:first-child h3{font-size:clamp(19px,1.65vw,22px);line-height:1.35;letter-spacing:-.01em}
+.latest-card p{font-size:13px;line-height:1.65;color:#465669}
+.latest-card .latest-category{line-height:1.6}
+.latest-card time{font-size:11px;line-height:1.5}
+.latest-note{line-height:1.6}
+@media(max-width:1050px){.newsroom-lead h2{font-size:clamp(30px,3.7vw,41px)}.latest-cards{gap:14px}}
+@media(max-width:770px){.navwrap .nav a{font-size:14px;padding:13px}.newsroom-lead h2{font-size:clamp(29px,6.3vw,38px)}.latest-card{padding:19px}.latest-card h3,.latest-card:first-child h3{font-size:21px}}
+@media(max-width:560px){.newsroom-lead h2{font-size:31px;line-height:1.17}.latest-cards{gap:12px}.latest-card{padding:18px}.latest-card h3,.latest-card:first-child h3{font-size:21px}}
