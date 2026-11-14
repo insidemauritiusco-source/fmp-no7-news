@@ -1,0 +1,32 @@
+[
+  {
+    "name": "L'Express",
+    "domain": "lexpress.mu",
+    "rss": "https://lexpress.mu/rss",
+    "enabled": false
+  },
+  {
+    "name": "Le Mauricien",
+    "domain": "lemauricien.com",
+    "rss": "https://www.lemauricien.com/feed/",
+    "enabled": true
+  },
+  {
+    "name": "Défi Media",
+    "domain": "defimedia.info",
+    "rss": "https://defimedia.info/rss.xml",
+    "enabled": false
+  },
+  {
+    "name": "ION News",
+    "domain": "ionnews.mu",
+    "rss": "https://ionnews.mu/feed/",
+    "enabled": false
+  },
+  {
+    "name": "Top FM",
+    "domain": "topfm.mu",
+    "rss": "https://topfm.mu/feed",
+    "enabled": false
+  }
+]
