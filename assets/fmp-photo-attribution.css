@@ -1,0 +1,6 @@
+/* Credited archival Bank of Mauritius photo; avoids falsely suggesting a 2026 event photograph. */
+.featured-photo-image{object-position:center 46%}
+.featured-photo-overlay{position:relative}
+.featured-photo-attribution{display:inline-block;align-self:flex-start;color:#fff!important;background:rgba(10,21,37,.82);font:600 10px/1.5 Arial,Helvetica,sans-serif;text-decoration:underline;text-underline-offset:2px;padding:5px 9px;margin-bottom:11px;max-width:100%}
+.featured-photo-attribution:hover,.featured-photo-attribution:focus-visible{color:#fff!important;text-decoration-thickness:2px}
+@media(max-width:480px){.featured-photo-attribution{font-size:9px;line-height:1.4}.featured-photo-credit{font-size:9px}}
