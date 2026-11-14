@@ -1,0 +1,23 @@
+/* FMP No.7 follow-up: improve header, logo and newsroom cards; preserve content and JS. */
+.brandline.shell{min-height:0;display:flex;align-items:center;gap:18px;padding-top:12px;padding-bottom:12px}
+.brandline>a{display:flex;align-items:center;justify-content:center;flex:0 0 122px}
+.brandline img{width:120px;height:104px;object-fit:contain}
+.brandline>div{min-width:0}
+.brandline h1{font-size:clamp(27px,2.7vw,36px);line-height:1.03;letter-spacing:-.035em}
+.brandline .sub{margin-top:7px;letter-spacing:1.6px}
+.brandline .rightmark{font-size:12px;line-height:1.5}
+.navwrap .shell{display:flex;align-items:center}
+.nav{width:100%;align-items:center;gap:clamp(14px,2.1vw,29px)}
+.nav a{white-space:nowrap;padding:13px 1px;font-size:13px}
+.latest-cards{align-items:stretch}
+.latest-card{position:relative;gap:12px;padding:22px 20px 19px;border-top:4px solid #b51f3b;transition:box-shadow .18s ease,transform .18s ease}
+.latest-card:hover{box-shadow:0 10px 26px #17243718;transform:translateY(-2px)}
+.latest-card h3,.latest-card:first-child h3{font-size:clamp(19px,1.7vw,23px);line-height:1.28;overflow-wrap:anywhere}
+.latest-card p{font-size:13px;line-height:1.6}
+.latest-card time{padding-top:10px;border-top:1px solid #edf0f3}
+.latest-head{align-items:center}
+.newsroom-lead h2{max-width:18ch}
+@media(max-width:1000px){.brandline>a{flex-basis:100px}.brandline img{width:98px;height:90px}.nav{gap:14px}.nav a{font-size:12px}}
+@media(max-width:770px){.brandline.shell{gap:12px;padding-top:10px;padding-bottom:10px}.brandline>a{flex-basis:77px}.brandline img{width:76px;height:74px}.brandline h1{font-size:clamp(21px,5vw,27px)}.navwrap .shell{display:block}.mobileToggle{display:block}.nav{align-items:stretch;gap:0}.nav a{white-space:normal;padding:12px}.latest-card{padding:18px}.latest-card:hover{transform:none}.latest-card h3,.latest-card:first-child h3{font-size:22px}}
+@media(max-width:400px){.brandline>a{flex-basis:66px}.brandline img{width:65px;height:65px}.brandline h1{font-size:21px}}
+@media(prefers-reduced-motion:reduce){.latest-card{transition:none}.latest-card:hover{transform:none}}
