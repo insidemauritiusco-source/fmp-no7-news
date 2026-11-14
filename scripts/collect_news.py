@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Conservative Mauritius RSS headline collector. No third-party dependencies."""
 import datetime as dt
+from email.utils import parsedate_to_datetime
 import json
 import os
 import re
@@ -12,6 +13,18 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 FEEDS = json.loads((ROOT / "news-sources.json").read_text(encoding="utf-8"))
 MAX_ITEMS = 100
+MAX_AGE_HOURS = 48
+
+def fresh(date_string, now=None):
+    try:
+        published = parsedate_to_datetime(date_string)
+        if published.tzinfo is None:
+            return False
+        current = now or dt.datetime.now(dt.timezone.utc)
+        age = current - published.astimezone(dt.timezone.utc)
+        return dt.timedelta(0) <= age <= dt.timedelta(hours=MAX_AGE_HOURS)
+    except (TypeError, ValueError, OverflowError):
+        return False
 
 def clean(value):
     return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", value or "")).strip()[:220]
@@ -32,7 +45,7 @@ def read_feed(source):
     for node in root.findall(".//item"):
         title = clean(node.findtext("title"))
         url = (node.findtext("link") or "").strip()
-        if title and safe_link(url, source["domain"]):
+        if title and safe_link(url, source["domain"]) and fresh(node.findtext("pubDate")):
             entries.append({"title": title, "source_url": url, "publisher": source["name"], "date": clean(node.findtext("pubDate")), "note": "Titre externe. Consulter la source pour les détails.", "status": "pending_review"})
     return entries
 
@@ -47,7 +60,7 @@ def main():
         except Exception as exc:
             errors.append({"source": source["name"], "error": type(exc).__name__})
     old = json.loads((ROOT / "news-review.json").read_text(encoding="utf-8"))
-    existing = {x["source_url"]: x for x in old.get("items", [])}
+    existing = {x["source_url"]: x for x in old.get("items", []) if fresh(x.get("date")) and x.get("status") == "pending_review"}
     for item in items:
         existing.setdefault(item["source_url"], item)
     output = {"updated_at": dt.datetime.now(dt.timezone.utc).isoformat(), "items": list(existing.values())[-MAX_ITEMS:], "errors": errors}
