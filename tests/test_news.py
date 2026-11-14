@@ -13,6 +13,12 @@ class CollectorTests(unittest.TestCase):
         self.assertFalse(collector.safe_link("http://lemauricien.com/news", "lemauricien.com"))
     def test_accept_known_host(self):
         self.assertTrue(collector.safe_link("https://www.lemauricien.com/news", "lemauricien.com"))
+    def test_reject_lookalike_domain(self):
+        self.assertFalse(collector.safe_link("https://fakelemauricien.com/news", "lemauricien.com"))
+    def test_reject_javascript_url(self):
+        self.assertFalse(collector.safe_link("javascript:alert(1)", "lemauricien.com"))
+    def test_accept_subdomain(self):
+        self.assertTrue(collector.safe_link("https://news.lemauricien.com/article", "lemauricien.com"))
     def test_strip_markup(self):
         self.assertEqual(collector.clean("<b>News</b>  today"), "News today")
 
