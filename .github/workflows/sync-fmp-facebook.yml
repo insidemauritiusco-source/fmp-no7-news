@@ -16,7 +16,7 @@ jobs:
       - name: Fetch Page media
         env:
           FMP_FACEBOOK_PAGE_ID: ${{ secrets.FMP_FACEBOOK_PAGE_ID }}
-          FMP_FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FMP_FACEBOOK_PAGE_ACCESS_TOKEN }}
+          FMP_FACEBOOK_PAGE_TOKEN: ${{ secrets.FMP_FACEBOOK_PAGE_ACCESS_TOKEN }}
         run: python scripts/sync_fmp_facebook.py
       - name: Save public media index
         run: |
