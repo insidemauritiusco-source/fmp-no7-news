@@ -1,0 +1,53 @@
+
+/* FMP No.7 editorial redesign — inspired by Inside Mauritius; preserve FMP identity and content. */
+:root{--ink:#142235;--muted:#566779;--line:#e2e8ee;--red:#bd2342;--paper:#fff;--off:#f7f8fa}
+body{background:var(--off);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.6}
+.shell{max-width:1240px}
+.utility{background:#101827;color:#e9edf2;letter-spacing:.07em}
+.utility .shell{min-height:40px;align-items:center}
+.utility [data-now]{color:#fff}
+.brandline{min-height:128px;gap:22px;border-bottom:1px solid #edf0f3}
+.brandline img{width:118px;height:110px;object-fit:contain}
+.brandline h1{font-size:clamp(25px,3vw,39px);letter-spacing:-.045em;line-height:1.06}
+.brandline .sub{font-size:11px;letter-spacing:.16em}
+.rightmark{font-weight:600}
+.navwrap{position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 6px 20px #1018270b}
+.nav{gap:5px;flex-wrap:wrap}
+.nav a{padding:16px 13px;transition:color .2s;font-size:13px}
+.stripe{height:4px}
+.welcome-banner{margin-top:28px;border-radius:10px;background:#13263d;box-shadow:0 16px 35px #152b3b18}
+.banner-photo{width:100%;object-fit:cover;max-height:390px}
+.banner-caption{background:linear-gradient(105deg,#101827,#24364c);padding:28px 35px}
+.banner-caption h2{font-family:Georgia,serif;font-size:clamp(36px,4.5vw,58px)}
+.banner-link{background:var(--red);border-color:var(--red)}
+.banner-link:hover{background:white;color:#152334}
+.notice{border-radius:6px;background:#fff}
+.latest-publications{padding-top:42px}
+.latest-head{border-bottom:1px solid #cbd5df}
+.latest-head:after{content:"";position:absolute}
+.latest-head h2,.sectiontitle{font-family:Georgia,"Times New Roman",serif;letter-spacing:-.035em}
+.latest-head h2{font-size:clamp(30px,3.8vw,46px)}
+.latest-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.latest-card{border:1px solid var(--line);border-top:3px solid var(--red);border-radius:9px;padding:24px;box-shadow:0 7px 22px #10182708}
+.latest-card:first-child{grid-row:span 2;background:#fff}
+.latest-card:first-child h3{font-size:clamp(25px,2.5vw,34px);font-family:Georgia,serif}
+.latest-card h3{font-family:Georgia,serif;font-size:clamp(19px,2vw,25px)}
+.latest-card p{font-size:14px}
+.frontpage-strap{border-bottom:2px solid #142235}
+.topgrid{gap:22px}
+.feature,.aside,.tile,.quiet,.news-added-card{border-radius:10px;box-shadow:0 7px 25px #14223508}
+.feature h2,.story h3{font-family:Georgia,serif}
+.feature h2{font-size:clamp(29px,3vw,41px)}
+.featureart{background:#f5f7f9}
+.aside>.eyebrow{background:#142235}
+.sectiontitle{font-size:clamp(27px,3vw,38px)}
+.tile{transition:box-shadow .2s,transform .2s}
+.tile:hover{transform:translateY(-2px);box-shadow:0 14px 32px #14223512}
+.pageheading{font-size:clamp(33px,5vw,58px)}
+.post-actions{border-radius:8px;background:#f7f9fb}
+.action-button{min-height:48px}
+.footer{background:#101827}
+@media(max-width:850px){.brandline{min-height:100px}.brandline img{width:90px;height:88px}.nav{gap:0}.nav a{padding:14px 9px}.latest-card:first-child{grid-row:auto}}
+@media(max-width:770px){.brandline{gap:14px;padding-top:14px;padding-bottom:14px}.brandline img{width:77px;height:76px}.brandline h1{font-size:clamp(21px,5vw,29px)}.navwrap{position:relative}.mobileToggle{display:block}.nav{display:none}.nav.open{display:flex}.banner-photo{max-height:none;object-fit:contain}.banner-caption{padding:22px}.latest-cards{grid-template-columns:1fr}.latest-card{padding:19px}.latest-card:first-child h3{font-size:27px}.topgrid{grid-template-columns:1fr}.section{padding-top:32px}}
+@media(max-width:420px){.brandline img{width:66px;height:68px}.brandline h1{font-size:20px}.brandline .sub{font-size:9px}.banner-caption h2{font-size:35px}.latest-head h2{font-size:30px}.latest-card{padding:16px}}
+@media(prefers-reduced-motion:reduce){.tile{transition:none}.tile:hover{transform:none}}
